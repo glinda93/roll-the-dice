@@ -8,3 +8,9 @@ Solidity implementation of [Simple Dice Game](https://www.lancasterschools.org/c
 > roll that number, you get another turn. When that number is not rolled, the turn is over. Mark the
 > tally for each time you roll the number. First one to a certain score of 10 points wins! (Set the
 > point total low for young children and higher for older ages.)
+
+## Tech Stack
+
+- [Solidity](https://docs.soliditylang.org/)
+- [Hardhat](https://hardhat.org)
+- [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/)
