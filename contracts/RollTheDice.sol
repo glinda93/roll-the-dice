@@ -350,6 +350,9 @@ contract RollTheDice is Context, Ownable, AccessControl, VRFConsumerBaseV2 {
         require(sent, "Failed to send Ether");
     }
 
+    /**
+     * @dev Get next turn in a recurisve manner
+     */
     function _getNextTurn(uint8 turn, uint8 maxTurn)
         internal
         pure
@@ -365,6 +368,11 @@ contract RollTheDice is Context, Ownable, AccessControl, VRFConsumerBaseV2 {
         }
     }
 
+    /**
+     * @dev Move a game forward to next round
+     *
+     * Internal function without parameter validations
+     */
     function _nextRound(uint256 gameId, uint8 turn) internal {
         games[gameId].turn = turn;
         games[gameId].round += 1;
