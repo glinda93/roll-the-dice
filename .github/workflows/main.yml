@@ -27,8 +27,10 @@ jobs:
           name: typechain
           path: typechain
       - run: npm test
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v3
+      - name: Upload coverage
+        uses: codecov/codecov-action@v2
         with:
-          name: code-coverage-report
-          path: coverage
+          directory: ./coverage
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          flags: unittests
