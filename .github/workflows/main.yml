@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   workflow_dispatch:
 
@@ -21,4 +21,16 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: typechain
+          path: typechain
       - run: npm test
+      - name: Upload coverage
+        uses: codecov/codecov-action@v2
+        with:
+          directory: ./coverage
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          flags: unittests

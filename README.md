@@ -1,4 +1,5 @@
 ![CI status](https://github.com/glinda93/roll-the-dice/actions/workflows/main.yml/badge.svg)
+[![codecov](https://codecov.io/gh/glinda93/roll-the-dice/branch/master/graph/badge.svg?token=1761VVJGDW)](https://codecov.io/gh/glinda93/roll-the-dice)
 
 # Roll The Dice
 
